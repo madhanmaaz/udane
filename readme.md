@@ -18,7 +18,7 @@
 ## Installation
 
 ```bash
-npm install -g udane
+npm install -g @madhanmaaz/udane
 ```
 
 ## Usage

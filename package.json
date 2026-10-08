@@ -1,5 +1,5 @@
 {
-    "name": "udane",
+    "name": "@madhanmaaz/udane",
     "version": "0.1.0",
     "description": "Udane - a fast, lightweight development server with live reload, built on Fastify.",
     "author": {
