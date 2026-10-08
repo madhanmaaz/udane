@@ -1,9 +1,9 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/madhanmaaz/udane/master/public/images/logo.png" width="100%" alt="udane" />
+    <img src="https://raw.githubusercontent.com/madhanmaaz/udane/master/public/images/logo.png" width="150px" alt="udane" />
 </p>
-<p align="center">
-    <h1>Udane</h1>
-</p>
+<h1 align="center">
+    Udane
+</h1>
 
 <p align="center">
     <a href="https://github.com/madhanmaaz/udane/blob/main/license"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License" /></a>
