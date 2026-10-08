@@ -1,0 +1,43 @@
+{
+    "name": "udane",
+    "version": "0.1.0",
+    "description": "Udane - a fast, lightweight development server with live reload, built on Fastify.",
+    "author": {
+        "name": "madhanmaaz",
+        "url": "https://madhanmaaz.netlify.app"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/madhanmaaz/udane.git"
+    },
+    "homepage": "https://github.com/madhanmaaz/udane#readme",
+    "bugs": {
+        "url": "https://github.com/madhanmaaz/udane/issues"
+    },
+    "license": "MIT",
+    "bin": {
+        "udane": "lib/bin.js"
+    },
+    "main": "lib/udane.js",
+    "engines": {
+        "node": ">=20"
+    },
+    "dependencies": {
+        "@fastify/one-line-logger": "^2.2.0",
+        "@fastify/static": "^10.1.3",
+        "chokidar": "^5.0.0",
+        "fastify": "^5.12.4",
+        "tarkine": "^1.3.3",
+        "ws": "^8.22.0",
+        "zod": "^4.6.4"
+    },
+    "keywords": [
+        "udane",
+        "live-server",
+        "live-reload",
+        "livereload",
+        "hot-reload",
+        "dev-server",
+        "fastify"
+    ]
+}

@@ -1,0 +1,41 @@
+/*! https://koyaka.netlify.app */
+.input {
+    --input_py: 1.75;
+    --input_px: 2.5;
+    --input_rds: 2.5;
+    --input_fs: 0.875;
+    --input-bg: var(--input-clr, var(--bg-300));
+    --input-fg: var(--input-clr-fg, var(--fg));
+    --input-bc: var(--input-clr, var(--bc));
+    --input-py: calc(var(--field-sz) * var(--input_py));
+    --input-px: calc(var(--field-sz) * var(--input_px));
+    --input-rds: calc(var(--field-rds) * var(--input_rds));
+    --input-fs: calc(1rem * var(--input_fs));
+    font-size: var(--input-fs);
+    color: hsl(var(--input-fg));
+    background-color: hsl(var(--input-bg));
+    padding: var(--input-py) var(--input-px);
+    border-radius: var(--input-rds);
+    border: var(--bw) solid hsl(var(--input-bc));
+    line-height: 1;
+    width: 100%;
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.input:focus {
+    --input-bc: var(--input-clr, var(--fg-alt)) / 0.8;
+    box-shadow: 0 0 0 var(--bw) hsl(var(--input-bc));
+}
+
+.input::placeholder {
+    color: hsl(var(--input-fg) / 0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .input {
+        transition: none;
+    }
+}

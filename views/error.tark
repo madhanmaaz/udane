@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{ statusCode }} - {{ title }}</title>
+        <link rel="shortcut icon" href="/{{ PUBLIC_DIR_PREFIX }}/favicon.ico" />
+        <link
+            rel="stylesheet"
+            href="/{{ PUBLIC_DIR_PREFIX }}/css/base/global.css"
+        />
+        <style>
+            .container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: calc(var(--sp) * 6);
+                padding: calc(var(--sp) * 4);
+            }
+
+            .container span {
+                width: 2px;
+                height: 40px;
+                background: hsl(var(--bc));
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>{{ statusCode }}</h1>
+            <span></span>
+            <p>{{ title }}</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>listing - {{ listing.base }}</title>
+        <link rel="icon" href="/{{ PUBLIC_DIR_PREFIX }}/favicon.ico" />
+
+        <link
+            rel="stylesheet"
+            href="/{{ PUBLIC_DIR_PREFIX }}/css/base/global.css"
+        />
+
+        <link
+            rel="stylesheet"
+            href="/{{ PUBLIC_DIR_PREFIX }}/css/components/input.css"
+        />
+
+        <link
+            rel="stylesheet"
+            href="/{{ PUBLIC_DIR_PREFIX }}/css/pages/listing.css"
+        />
+    </head>
+    <body>
+        <header>
+            <img
+                class="logo"
+                src="/{{ PUBLIC_DIR_PREFIX }}/images/logo.png"
+                alt="udane"
+            />
+
+            <input
+                id="directory-input"
+                class="input"
+                type="text"
+                value="{{ listing.base }}"
+                placeholder="Directory bar..."
+            />
+
+            <input
+                id="search-input"
+                class="input"
+                type="search"
+                placeholder="Search files..."
+            />
+        </header>
+
+        <main id="files">
+            {{:for file in listing.entries }}
+            <a href="{{ file.href }}">
+                <img
+                    src="/{{ PUBLIC_DIR_PREFIX }}/images/{{ file.isDirectory ? 'folder' : 'file' }}.png"
+                    alt=""
+                />
+                <span>{{ file.name }}</span>
+            </a>
+            {{/for}}
+        </main>
+
+        <footer>
+            <p>
+                <a
+                    href="https://github.com/madhanmaaz/udane"
+                    style="color: hsl(var(--primary))"
+                    target="_blank"
+                >
+                    Udane
+                </a>
+                Developed by
+                <a href="https://madhanmaaz.netlify.app" target="_blank">
+                    madhanmaaz
+                </a>
+            </p>
+        </footer>
+
+        <script>
+            const filesContainer = document.getElementById("files");
+            const directoryInput = document.getElementById("directory-input");
+            const searchInput = document.getElementById("search-input");
+
+            const files = [...filesContainer.querySelectorAll("a")];
+
+            // directory input
+            directoryInput.addEventListener("keydown", (e) => {
+                if (e.key !== "Enter") return;
+
+                const value = directoryInput.value.trim() || "/";
+                location.pathname = value.endsWith("/") ? value : `${value}/`;
+            });
+
+            // search
+            searchInput.addEventListener("input", (e) => {
+                const value = e.target.value.trim().toLowerCase();
+
+                for (const file of files) {
+                    const name = file.textContent.trim().toLowerCase();
+                    file.classList.toggle("hide", !name.includes(value));
+                }
+            });
+        </script>
+    </body>
+</html>

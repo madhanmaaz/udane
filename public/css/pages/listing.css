@@ -1,0 +1,88 @@
+body {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--sp) * 2);
+    height: 100vh;
+    height: 100dvh;
+}
+
+header,
+main,
+footer {
+    padding: 1rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--sp) * 5);
+}
+
+header .logo {
+    width: 50px;
+}
+
+#directory-input {
+    flex: 3;
+}
+
+#search-input {
+    flex: 1;
+}
+
+main {
+    flex: 1;
+    overflow-y: auto;
+    text-align: left;
+}
+
+main a {
+    display: inline-flex;
+    align-items: center;
+    gap: calc(var(--sp) * 2);
+
+    width: 300px;
+    margin: calc(var(--sp) * 1) 0;
+    padding: calc(var(--sp) * 2) calc(var(--sp) * 3);
+
+    background-color: hsl(var(--bg-200));
+    border: var(--border);
+    border-radius: calc(var(--field-rds) * 1.5);
+}
+
+main a span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+main a:hover {
+    background-color: hsl(var(--bg-300));
+}
+
+main a img {
+    width: 18px;
+}
+
+main a.hide {
+    display: none;
+}
+
+footer {
+    text-align: right;
+}
+
+@media (max-width: 640px) {
+    header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    main a {
+        width: 100%;
+    }
+}

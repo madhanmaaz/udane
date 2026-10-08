@@ -1,0 +1,136 @@
+/* koyaka */
+:root {
+    --sp: 0.25rem;
+    --box-sz: 0.5rem;
+    --field-sz: 0.25rem;
+    --ctrl-sz: 0.25rem;
+    --box-rds: 0.5rem;
+    --field-rds: 0.25rem;
+    --ctrl-rds: 0.125rem;
+    --bw: 1px;
+    --ow: 2px;
+    --bc: var(--fg) / 0.11;
+    --border: var(--bw) solid hsl(var(--bc));
+    --outline: var(--ow) solid hsl(var(--fg-alt));
+    --transparent: 0 0% 0% / 0;
+    --ff: var(
+        --app-ff,
+        ui-sans-serif,
+        system-ui,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji"
+    );
+    --ff-mono: var(
+        --app-ff-mono,
+        ui-monospace,
+        "Cascadia Code",
+        "Source Code Pro",
+        Menlo,
+        Consolas,
+        "DejaVu Sans Mono",
+        monospace
+    );
+    color-scheme: dark;
+    --bg-100: 200 20% 6%;
+    --bg-200: 200 18% 9%;
+    --bg-300: 200 16% 12%;
+    --bg-400: 200 14% 16%;
+    --fg: 210 20% 92%;
+    --fg-alt: 210 10% 65%;
+    --primary: 87 77% 49%;
+    --primary-fg: 87 61% 7%;
+    --secondary: 74 90% 52%;
+    --secondary-fg: 74 50% 10%;
+    --accent: 160 70% 45%;
+    --accent-fg: 160 50% 10%;
+    --neutral: 200 10% 55%;
+    --neutral-fg: 200 15% 10%;
+    --info: 200 90% 60%;
+    --info-fg: 200 60% 10%;
+    --success: 140 60% 50%;
+    --success-fg: 140 50% 10%;
+    --warning: 45 100% 55%;
+    --warning-fg: 45 70% 10%;
+    --error: 0 85% 65%;
+    --error-fg: 0 60% 12%;
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    border: none;
+    outline: none;
+    background: none;
+    text-decoration: none;
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--fg) / 0.3) transparent;
+    outline-offset: calc(var(--ow) / 2);
+}
+
+html,
+:host {
+    font-family: var(--ff);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    background-color: hsl(var(--bg-100));
+    color: hsl(var(--fg));
+}
+
+code,
+pre,
+kbd,
+samp {
+    font-family: var(--ff-mono);
+    font-size: 0.9em;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    display: block;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+iframe {
+    border: 0;
+}
+
+:disabled,
+.disabled,
+[disabled] {
+    opacity: 0.5;
+    user-select: none;
+    pointer-events: none;
+}

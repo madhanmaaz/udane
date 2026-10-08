@@ -1,0 +1,10 @@
+@import url("./root.css");
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../../fonts/Roboto-Medium.ttf");
+}
+
+:root {
+    --app-ff: "Roboto";
+}
