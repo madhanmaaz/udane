@@ -1,6 +1,6 @@
 {
     "name": "@madhanmaaz/udane",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Udane - a fast, lightweight development server with live reload, built on Fastify.",
     "author": {
         "name": "madhanmaaz",
@@ -11,6 +11,12 @@
         "url": "git+https://github.com/madhanmaaz/udane.git"
     },
     "homepage": "https://github.com/madhanmaaz/udane#readme",
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/madhanmaaz"
+        }
+    ],
     "bugs": {
         "url": "https://github.com/madhanmaaz/udane/issues"
     },
